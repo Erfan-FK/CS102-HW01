@@ -8,12 +8,12 @@ public class Array {
         Random random = new Random();
         
         int UPPER_SIZE = 101;
-        newArray = new int[size];
+        this.array = new int[size];
 
         for(int i = 0; i < size; i++)
         {
             int theRandom = random.nextInt(UPPER_SIZE); 
-            newArray[i] = theRandom;
+            this.array[i] = theRandom;
         }
     }
     
@@ -21,7 +21,7 @@ public class Array {
     public int findMin(){
         int min = 101;
 
-        for(int member : this.newArray)
+        for(int member : this.array)
         {
             if(member < min)
             {
@@ -36,7 +36,7 @@ public class Array {
     public int findMax(){  
         int max = -1;
 
-        for(int member : this.newArray)
+        for(int member : this.array)
         {
             if(member > max)
             {
@@ -82,11 +82,11 @@ public class Array {
     public int findSumOdd(){
         int sumOdd = 0;
 
-        for(int i = 1; i < this.newArray.length; i++)
+        for(int i = 1; i < this.array.length; i++)
         {
             if(i % 2 != 0)
             {
-                sumOdd = sumOdd + this.newArray[i];
+                sumOdd = sumOdd + this.array[i];
             }
         }
 
@@ -97,11 +97,11 @@ public class Array {
     public int findSumEven(){
         int sumEven = 0;
 
-        for(int i = 0; i < this.newArray.length; i++)
+        for(int i = 0; i < this.array.length; i++)
         {
             if(i % 2 == 0)
             {
-                sumEven = sumEven + this.newArray[i];
+                sumEven = sumEven + this.array[i];
             }
         }
         
