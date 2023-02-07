@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Main{
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean hasBuiltArray = false;
@@ -28,7 +29,13 @@ public class Main{
                     System.out.println("Enter the size of your array: ");
                     int size = scanner.nextInt();
                     scanner.nextLine();
-                                        
+
+                    while(size <= 0)
+                    {
+                        System.out.print("Please enter a positive (+) integer: ");
+                        size = scanner.nextInt();
+                    }
+                    
                     System.out.println("Creating an Array with size " + size);
                     array = new Array(size);
                     hasBuiltArray = true;
