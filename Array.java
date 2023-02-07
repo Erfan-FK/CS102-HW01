@@ -68,6 +68,7 @@ public class Array {
         //crating a stringBuilder object
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append('{');
+
         //finding the differences
         for(int i = 0; i < this.array.length; i++){
             stringBuilder.append(this.array[i] - this.findAverage());
@@ -110,5 +111,16 @@ public class Array {
         }
         
         return sumEven;
+    }
+
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        StringBuilder arrayDisplay = new StringBuilder();
+        for(int i = 0; i < this.array.length; i++){
+            arrayDisplay.append(this.array[i]);
+            arrayDisplay.append(", ");
+        }
+        return arrayDisplay.toString();
     }
 }

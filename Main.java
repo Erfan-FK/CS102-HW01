@@ -16,7 +16,8 @@ public class Main{
         menu.append("\t4- Find average and display differences.\n");
         menu.append("\t5- Find sum of odd indexed elements.\n");
         menu.append("\t6- Find sum of even indexed elements.\n");
-        menu.append("\t7- Exit\n");
+        menu.append("\t7- Display Array.\n");
+        menu.append("\t8- Exit\n");
 
         do{
             System.out.println(menu);
@@ -99,8 +100,18 @@ public class Main{
                     break;
 
                 case '7':
-                System.out.println("It was a pleasure.");
-                again = false;            
+                    if(!hasBuiltArray){
+                        System.out.println("First you have to create an array Sir/Mam.\n");
+                        break;
+                    }
+                    
+                    System.out.println(array);  
+                    break;
+
+                case '8':
+                    System.out.println("It was a pleasure.");
+                    again = false;   
+                    break;         
             }
         }while(again);
 
