@@ -1,19 +1,23 @@
 import java.util.Random;
 public class Array {
     
-    //array instance variable
+    //Instance variable 
     private int[] array;
-    //constructor
-    public Array(int size){
-        Random random = new Random();
-        
-        int UPPER_SIZE = 101;
-        this.array = new int[size];
+    
+    //Constructor
+    public Array(int size)
+    {
+        array = new int[size];
+        fillArray();
+    }
 
-        for(int i = 0; i < size; i++)
+    private void fillArray()
+    {
+        int bound = 101;
+        Random rand = new Random();
+        for(int i = 0; i < this.array.length; i++)
         {
-            int theRandom = random.nextInt(UPPER_SIZE); 
-            this.array[i] = theRandom;
+            this.array[i] = rand.nextInt(bound);
         }
     }
     
