@@ -1,10 +1,9 @@
 import java.util.Random;
 public class Array {
-
-    int newArray[];
-
-    // Constructor and method gonna be initialized...
-    // a
+    
+    //array instance variable
+    private int[] array;
+    //constructor
     public Array(int size){
         Random random = new Random();
         
@@ -51,18 +50,31 @@ public class Array {
     // d
     public int findAverage(){
         int average = 0;
-
-        for(int member : this.newArray)
-        {
-            average = average + member;
+        int total = 0;
+        //calculation
+        for(int i = 0; i < this.array.length; i++){
+            total = total + this.array[i];
         }
-
-        return (int) average / this.newArray.length;
+        average = total / this.array.length;
+        return average;
     }
 
     // d
     public String displayDifferences(){ 
-        String differences = "";
+        //crating a stringBuilder object
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append('{');
+        //finding the differences
+        for(int i = 0; i < this.array.length; i++){
+            stringBuilder.append(this.array[i] - this.findAverage());
+            if(i != this.array.length - 1){
+                stringBuilder.append(',');
+                stringBuilder.append(' ');
+            } 
+        }
+        stringBuilder.append('}');
+        
+        String differences= stringBuilder.toString();
         return differences;
     }
 

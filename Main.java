@@ -22,7 +22,6 @@ public class Main{
             System.out.println(menu);
             System.out.print("So? ");
             char reponse = scanner.nextLine().charAt(0);
-            scanner.nextLine();
 
             switch(reponse){
                 case '1':
