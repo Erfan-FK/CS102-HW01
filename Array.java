@@ -86,30 +86,26 @@ public class Array {
     // e
     public int findSumOdd(){
         int sumOdd = 0;
-
-        for(int i = 1; i < this.array.length; i++)
+        for (int i = 0; i < this.intArray.length; i++)
         {
-            if(i % 2 != 0)
+            if (i % 2 == 1)
             {
-                sumOdd = sumOdd + this.array[i];
+                sumOdd += this.intArray[i];
             }
         }
-
         return sumOdd;
     }
 
     // e
     public int findSumEven(){
         int sumEven = 0;
-
-        for(int i = 0; i < this.array.length; i++)
+        for (int i = 0; i < this.intArray.length; i++)
         {
-            if(i % 2 == 0)
+            if (i % 2 == 0)
             {
-                sumEven = sumEven + this.array[i];
+                sumEven += this.intArray[i];
             }
         }
-        
         return sumEven;
     }
 
